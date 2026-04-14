@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>About — The Drops Co</title>
+  <meta name="description" content="The conviction behind The Drops Co. Why liquid, why now, and where we are going."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<nav id="nav">
+  <a class="nav-logo" href="index.html">The Drops Co</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-deco" style="background:var(--yellow)"></div>
+  <h1>The conviction<br/>behind <em>the drop.</em></h1>
+  <p class="page-hero-sub">
+    A brand built on the belief that nutrition done right should feel like
+    the best thing in your day — not the most dutiful.
+  </p>
+</div>
+
+<section class="about-section">
+  <div class="about-intro">
+    <h2 class="reveal">
+      The health category<br/>has a problem.<br/>It leads with <em>fear.</em>
+    </h2>
+    <div class="about-intro-body reveal reveal-d1">
+      <p>
+        The packaging looks like a pharmacy. The copy sounds like a warning label.
+        The whole thing is designed to make you feel broken before it offers to fix you.
+        And the market was offering exactly that to a generation with global taste, zero
+        patience for condescension, and a finely tuned instinct for brands that perform
+        care versus those that actually have it.
+      </p>
+      <p>
+        The Drops Co was built to be the thing that didn't exist: a liquid nutrition brand
+        that earns its place on your desk, not your medicine shelf. Honest ingredients.
+        Extraordinary taste. A bottle with a point of view.
+      </p>
+      <p>
+        The format is liquid — not because liquid is a trend, but because it is the only
+        format that lets us build taste profiles worthy of a café menu. Flavours you would
+        order. Nutrition that arrives the way a great drink arrives: with presence, with
+        intention, and with the distinct feeling that someone cared deeply about how it
+        would land.
+      </p>
+    </div>
+  </div>
+
+  <div class="differentiators reveal">
+    <div class="diff-item">
+      <p class="diff-num">01</p>
+      <p class="diff-title">Taste first</p>
+      <p class="diff-text">
+        The sensory experience is the primary compliance driver. If it doesn't taste
+        extraordinary, people stop taking it. We work with world-class flavourists and
+        do not launch until the taste is genuinely extraordinary — not 'good for a
+        supplement'. The kind where someone takes a sip and asks what it is.
+      </p>
+    </div>
+    <div class="diff-item">
+      <p class="diff-num">02</p>
+      <p class="diff-title">Look &amp; feel</p>
+      <p class="diff-text">
+        Packaging that earns a place on your desk, not your medicine shelf. Bold,
+        saturated, unapologetic. Each product has its own colour world — distinct
+        enough to be immediately recognisable, unified enough to be unmistakably
+        The Drops Co.
+      </p>
+    </div>
+    <div class="diff-item">
+      <p class="diff-num">03</p>
+      <p class="diff-title">Real nutrition</p>
+      <p class="diff-text">
+        Active, bioavailable ingredient forms only — the versions the body can
+        actually use. No synthetic dyes, no artificial sweeteners, no added refined
+        sugar. Zero heavy metals. NABL-accredited testing every single batch.
+        FSSAI compliant. Honest labelling. Always.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="phase-strip">
+  <div class="phase-strip-header reveal">
+    <h2>The arc is <em>long.</em></h2>
+  </div>
+  <div class="phase-grid">
+    <div class="phase-item reveal">
+      <p class="phase-tag">Phase 01 · Now</p>
+      <p class="phase-title">Build the product. Build the trust.</p>
+      <p class="phase-desc">
+        Four liquid nutrition products. The hardest audience in the world to earn.
+        If we get this right, everything else follows. Earning their trust is the
+        most valuable thing we can do.
+      </p>
+    </div>
+    <div class="phase-item reveal reveal-d1">
+      <p class="phase-tag">Phase 02 · Near</p>
+      <p class="phase-title">Grow with the community.</p>
+      <p class="phase-desc">
+        The Drops Co grows across every life stage. Every product decision and
+        communication principle from Phase 1 carries forward with integrity.
+        The tone evolves. The honesty never changes.
+      </p>
+    </div>
+    <div class="phase-item reveal reveal-d2">
+      <p class="phase-tag">Phase 03 · Far</p>
+      <p class="phase-title">A café. Everywhere.</p>
+      <p class="phase-desc">
+        An apothecary-style wellness café — quiet, considered, beautiful in a way
+        that earns the word. Our products on shelves designed to be owned. A drop
+        in your morning cold brew, wherever you are.
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="footer-logo">The Drops Co</span>
+  <ul class="footer-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <span class="footer-copy">© 2026 The Drops Co. All rights reserved.</span>
+</footer>
+
+<script>
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+}, { passive: true });
+
+const revealEls = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+}, { threshold: 0.12 });
+revealEls.forEach(el => obs.observe(el));
+</script>
+</body>
+</html>

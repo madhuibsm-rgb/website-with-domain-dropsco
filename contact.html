@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Contact — The Drops Co</title>
+  <meta name="description" content="Get in touch with The Drops Co."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<nav id="nav">
+  <a class="nav-logo" href="index.html">The Drops Co</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-deco" style="background:var(--raspberry)"></div>
+  <h1>Let's talk<br/><em>drops.</em></h1>
+  <p class="page-hero-sub">
+    Open to conversations about partnerships, ingredient sourcing, distribution,
+    manufacturing, press, and everything in between.
+  </p>
+</div>
+
+<section class="contact-section">
+  <div class="contact-info reveal">
+    <h2>We'd love to<br/>hear from <em>you.</em></h2>
+    <p>
+      Whether you're a contract manufacturer, an ingredient supplier, a potential
+      retail or distribution partner, or just curious about what we're building —
+      reach out. We read everything.
+    </p>
+    <div class="contact-email">
+      <a href="mailto:hello@thedropsco.com">hello@thedropsco.com</a>
+    </div>
+  </div>
+
+  <form class="contact-form reveal reveal-d1" id="contact-form" onsubmit="handleSubmit(event)" novalidate>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="name">Your name</label>
+        <input type="text" id="name" name="name" placeholder="First Last" required/>
+      </div>
+      <div class="form-group">
+        <label for="company">Company</label>
+        <input type="text" id="company" name="company" placeholder="Optional"/>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email address</label>
+      <input type="email" id="email" name="email" placeholder="you@company.com" required/>
+    </div>
+
+    <div class="form-group">
+      <label for="topic">What's this about?</label>
+      <select id="topic" name="topic">
+        <option value="" disabled selected>Select a topic</option>
+        <option>Contract Manufacturing</option>
+        <option>Ingredient Supply</option>
+        <option>Distribution &amp; Retail</option>
+        <option>Brand Partnership</option>
+        <option>Press &amp; Media</option>
+        <option>Something else</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Tell us a little about what you have in mind…" required></textarea>
+    </div>
+
+    <button type="submit" class="btn-submit" id="contact-submit">Send message</button>
+
+    <div id="contact-success" style="display:none;font-size:.9rem;opacity:.55;font-weight:300;line-height:1.7;margin-top:.5rem">
+      Message received. We'll be in touch shortly.
+    </div>
+  </form>
+</section>
+
+<footer>
+  <span class="footer-logo">The Drops Co</span>
+  <ul class="footer-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+  <span class="footer-copy">© 2026 The Drops Co. All rights reserved.</span>
+</footer>
+
+<script>
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+}, { passive: true });
+
+const revealEls = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+}, { threshold: 0.12 });
+revealEls.forEach(el => obs.observe(el));
+
+function handleSubmit(e) {
+  e.preventDefault();
+  const btn = document.getElementById('contact-submit');
+  btn.textContent = 'Sending…';
+  btn.disabled = true;
+  setTimeout(() => {
+    document.getElementById('contact-form').reset();
+    btn.style.display = 'none';
+    document.getElementById('contact-success').style.display = 'block';
+  }, 1000);
+}
+</script>
+</body>
+</html>

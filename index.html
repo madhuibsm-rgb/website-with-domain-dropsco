@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>The Drops Co — Good things, quietly.</title>
+  <meta name="description" content="Liquid nutrition made for real life moments. Honest ingredients, extraordinary taste."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a class="nav-logo" href="index.html">The Drops Co</a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <p class="hero-eyebrow">Liquid nutrition · Launching 2026</p>
+    <h1 class="hero-headline">
+      Good<br/>things,<br/><em>quietly.</em>
+    </h1>
+    <p class="hero-sub">
+      Liquid nutrition made for the moments that actually matter.
+      Honest ingredients, extraordinary taste, no compromise.
+    </p>
+    <p class="hero-tagline">thedropsco.com</p>
+  </div>
+  <div class="hero-blobs">
+    <div class="blob blob-1">
+      <span class="blob-name">Focus &amp; Stress</span>
+      <span class="blob-flavor">Yuzu · Frozen Mint</span>
+    </div>
+    <div class="blob blob-2">
+      <span class="blob-name">Active &amp; Athletic</span>
+      <span class="blob-flavor">Blood Orange · Sea Salt</span>
+    </div>
+    <div class="blob blob-3">
+      <span class="blob-name">Menstrual &amp; Iron</span>
+      <span class="blob-flavor">Raspberry · Cardamom</span>
+    </div>
+    <div class="blob blob-4">
+      <span class="blob-name">Daily Multi</span>
+      <span class="blob-flavor">Watermelon Rose · Chilli</span>
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE ARE -->
+<section class="section-who">
+  <p class="section-label">Who we are</p>
+  <div class="who-content reveal">
+    <h2>
+      Not a vitamin company<br/>that cares about taste.<br/>
+      <em>A taste company<br/>that delivers nutrition.</em>
+    </h2>
+    <p>
+      The Drops Co was built on a single conviction: that nutrition done right —
+      honest, effective, and genuinely extraordinary to experience — should not
+      be the exception. It should be the standard.
+    </p>
+    <p>
+      The format is liquid. Not because liquid is a trend — because liquid is
+      the only format that lets us build taste profiles worthy of a café menu.
+      Flavours you'd describe to someone else. Nutrition that arrives the way
+      a great drink arrives: with presence, with intention, with the distinct
+      feeling that someone cared deeply about how it would land.
+    </p>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="section-products" id="products">
+  <div class="products-header reveal">
+    <h2>Four drops. <em>Four life moments.</em></h2>
+  </div>
+
+  <div class="products-layout">
+
+    <!-- Tab buttons -->
+    <div class="products-tabs">
+      <button class="tab-btn active" data-product="focus" style="--accent:var(--yellow)">
+        <span class="tab-num">01</span>
+        <span class="tab-name">Focus &amp; Stress</span>
+      </button>
+      <button class="tab-btn" data-product="active" style="--accent:var(--orange)">
+        <span class="tab-num">02</span>
+        <span class="tab-name">Active &amp; Athletic</span>
+      </button>
+      <button class="tab-btn" data-product="menstrual" style="--accent:var(--raspberry)">
+        <span class="tab-num">03</span>
+        <span class="tab-name">Menstrual &amp; Iron</span>
+      </button>
+      <button class="tab-btn" data-product="daily" style="--accent:var(--rose)">
+        <span class="tab-num">04</span>
+        <span class="tab-name">Daily Multi</span>
+      </button>
+    </div>
+
+    <!-- Panels -->
+    <div class="products-panels">
+
+      <!-- FOCUS -->
+      <div class="product-panel active" id="panel-focus" data-accent="var(--yellow)" data-name="Focus &amp; Stress Support">
+        <p class="panel-moment">
+          Exam season. The deadline that won't move.<br/>
+          <em>The mind that can't switch off.</em>
+        </p>
+
+        <div class="panel-helps">
+          <p class="panel-helps-label">What it helps with</p>
+          <ul class="panel-helps-list">
+            <li>Sustained mental focus</li>
+            <li>Stress &amp; cortisol resilience</li>
+            <li>Neurotransmitter support</li>
+            <li>Cognitive clarity</li>
+            <li>Energy metabolism</li>
+          </ul>
+        </div>
+
+        <div class="panel-meta">
+          <div class="panel-meta-item">
+            <p class="panel-meta-label">Flavour</p>
+            <p class="panel-meta-value">Yuzu Lemon · Frozen Mint</p>
+          </div>
+          <div class="panel-meta-item">
+            <p class="panel-meta-label">Size</p>
+            <p class="panel-meta-value">500 ml · 200 ml</p>
+          </div>
+          <div class="panel-meta-item">
+            <p class="panel-meta-label">Format</p>
+            <p class="panel-meta-value">Liquid · Daily</p>
+          </div>
+        </div>
+
+        <div class="accordion" id="acc-focus">
+          <button class="accordion-trigger" onclick="toggleAccordion('acc-focus')">
+            <span class="accordion-trigger-label">Key ingredients</span>
+            <svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="accordion-body">
+            <div class="ingredients-list">
+              <div class="ingredient-row">
+                <div><p class="ingredient-name">Methylcobalamin</p><p class="ingredient-form">Vitamin B12 — active form</p></div>
+                <p class="ingredient-benefit">Directly usable by the body. Supports nerve function, myelin repair and memory consolidation.</p>
+              </div>
+              <div class="ingredient-row">
+                <div><p class="ingredient-name">Pyridoxal-5'-Phosphate</p><p class="ingredient-form">Vitamin B6 — active form</p></div>
+                <p class="ingredient-benefit">No liver conversion needed. Drives serotonin and dopamine synthesis — the mood and focus co-factor.</p>
+              </div>
+              <div class="ingredient-row">
+                <div><p class="ingredient-name">Calcium L-5-MTHF</p><p class="ingredient-form">Folate — bioavailable form</p></div>
+                <p class="ingredient-benefit">Bypasses the MTHFR variant affecting a large portion of the population. Directly available for DNA repair and neural function.</p>
+              </div>
+              <div class="ingredient-row">
+                <div><p class="ingredient-name">Thiamine Hydrochloride</p><p class="ingredient-form">Vitamin B1</p></div>
+                <p class="ingredient-benefit">Drives glucose metabolism in the brain. Depleted by high-carb, high-stress lifestyles.</p>
+              </div>
+              <div class="ingredient-row">
+                <div><p class="ingredient-name">Niacinamide</p><p class="ingredient-form">Vitamin B3 — zero flushing form</p></div>
+                <p class="ingredient-benefit">NAD+ synthesis and cellular energy metabolism. Niacinamide over nicotinic acid — no flushing effect.</p>
+              </div>
+              <div class="ingredient-row">
+                <div><p class="ingredient-name">Riboflavin-5'-Phosphate</p><p class="ingredient-form">Vitamin B2 — active coenzyme</p></div>
+                <p class="ingredient-benefit">Superior absorption vs plain riboflavin. Light-sensitive — amber packaging is non-negotiable.</p>
+              </div>
+              <div class="ingredient-row">
+                <div><p class="ingredient-name">Zinc Bisglycinate</p><p class="ingredient-form">Chelated zinc — ~40% absorption</p></div>
+                <p class="ingredient-benefit">Zero metallic taste — critical for daily compliance in liquid. Supports neuroplasticity and stress resilience.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn-buy" onclick="openModal('Focus &amp; Stress Support', 'var(--yellow)')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          Buy Now
+        </button>
+      </div>
+
+      <!-- ACTIVE -->
+      <div class="product-panel" id="panel-active" data-accent="var(--orange)" data-name="Active &amp; Athletic Support">
+        <p class="panel-moment">
+          The body being asked to do a lot.<br/>
+          <em>And recover by morning.</em>
+        </p>
+
+        <div class="panel-helps">
+          <p class="panel-helps-label">What it helps with</p>
+          <ul class="panel-helps-list">
+            <li>Muscle recovery</li>
+            <li>Bone strength &amp; density</li>
+            <li>Energy &amp; endurance</li>
+            <li>Immune function</li>
+            <li>Connective tissue repair</li>
+          </ul>
+        </div>
+
+        <div class="panel-meta">
+          <div class="panel-meta-item">
+            <p class="panel-meta-label">Flavour</p>
+            <p class="panel-meta-value">Blood Orange · Smoked Sea Salt</p>
+          </div>
+          <div class="panel-meta-item">
+            <p class="panel-meta-label">Size</p>
+            <p class="panel-meta-value">500 ml · 200 ml</p>
+          </div>
+          <div class="panel-meta-item">
+            <p class="panel-meta-label">Format</p>
+            <p class="panel-meta-value">Liquid · Daily</p>
+          </div>
+        </div>
+
+        <div class="accordion" id="acc-active">
+          <button class="accordion-trigger" onclick="toggleAccordion('acc-active')">
+            <span class="accordion-trigger-label">Key ingredients</span>
+            <svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="accordion-body">
+            <div class="ingredients-list">
+              <div class="ingredient-row">
+                <div><p class="ingredient-name">Cholecalciferol</p><p class="ingredient-form">Vitamin D3 — 600 IU</p></div>
+                <p class="ingredient-benefit">Gold-standard D3, fat-soluble and emulsified. Critical for bone mineralisation and immune performance.</p>
+              </div>
+              <div class="ingredient-row">
+                <div><p class="ingredient-name">MK-7</p><p class="ingredient-form">Vitamin K2 — fermentation-derived</p></div>
+                <p class="ingredient-benefit">Routes calcium to bone, not arteries. The essential co-factor for D3-driven bone health. Longer half-life than MK-4.</p>
+              </div>
+              <div class="ingredient-row">
+                <div><p class="ingredient-name">Magnesium Bisglycinate</p><p class="ingredient-form">200 mg — highest GI tolerance form</p></div>
+                <p class="ingredient-benefit">Muscle recovery and cramp prevention. Supports sleep quality. Bisglycinate form — no laxative effect at this dose.</p>
+              </div>
+              <div class="ingredient-row">
+                <div><p class="ingredient-name">Zinc Bisglycinate</p><p class="ingredient-form">10 mg — elevated for active use</p></div>
+                <p class="ingredient-benefit">Immune function, wound repair, testosterone support. Chelated form — no metallic taste in liquid.</p>
+              </div>
+              <div class="ingredient-row">
+                <div><p class="ingredient-name">Liposomal Vitamin C</p><p class="ingredient-form">Ascorbic Acid — liposomal form</p></div>
+                <p class="ingredient-benefit">Maintains plasma levels under high oxidative stress post-exercise. Collagen synthesis for connective tissue repair.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn-buy" style="--accent:var(--orange)" onclick="openModal('Active &amp; Athletic Support', 'var(--orange)')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          Buy Now
+        </button>
+      </div>
+
+      <!-- MENSTRUAL -->
+      <div class="product-panel" id="panel-menstrual" data-accent="var(--raspberry)" data-name="Menstrual &amp; Iron Support">
+        <p class="panel-moment">
+          One week in four. The one that flattens you<br/>
+          <em>and never gets taken seriously enough.</em>
+        </p>
+
+        <div class="panel-helps">
+          <p class="panel-helps-label">What it helps with</p>
+          <ul class="panel-helps-list">
+            <li>Iron absorption &amp; anaemia support</li>
+            <li>Cramp &amp; inflammation relief</li>
+            <li>Energy &amp; RBC production</li>
+            <li>PMS mood support</li>
+            <li>Hormonal balance</li>
+          </ul>
+        </div>
+
+        <div class="panel-meta">
+          <div class="panel-meta-item">
+            <p class="panel-meta-label">Flavour</p>
+            <p class="panel-meta-value">Raspberry · Black Cardamom</p>
+          </div>
+          <div class="panel-meta-item">
+            <p class="panel-meta-label">Size</p>
+            <p class="panel-meta-value">500 ml · 200 ml</p>
+          </div>
+          <div class="panel-meta-item">
+            <p class="panel-meta-label">Format</p>
+            <p class="panel-meta-value">Liquid · Daily</p>
+          </div>
+        </div>
+
+        <div class="accordion" id="acc-menstrual">
+          <button class="accordion-trigger" onclick="toggleAccordion('acc-menstrual')">
+            <span class="accordion-trigger-label">Key ingredients</span>
+            <svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="accordion-body">
+            <div class="ingredients-list">
+              <div class="ingredient-row">
+                <div><p class="ingredient-name">Ferrous Bisglycinate</p><p class="ingredient-form">Iron — 14 mg chelated form</p></div>
+                <p class="ingredient-benefit">3× higher absorption than ferrous sulphate. Zero GI distress — the primary compliance problem with conventional iron is solved here.</p>
+              </div>
+              <div class="ingredient-row">
+                <div><p class="ingredient-name">Methylcobalamin</p><p class="ingredient-form">Vitamin B12 — 2.5 mcg</p></div>
+                <p class="ingredient-benefit">Co-dependent with iron for red blood cell maturation. Active form, no conversion. Essential where B12 and iron deficiency co-occur.</p>
+              </div>
+              <div class="ingredient-row">
+                <div><p class="ingredient-name">Ascorbic Acid</p><p class="ingredient-form">Vitamin C — 40 mg</p></div>
+                <p class="ingredient-benefit">Enhances non-haem iron absorption by 2–3×. Must be paired with iron in the same dose — done here by design.</p>
+              </div>
+              <div class="ingredient-row">
+                <div><p class="ingredient-name">Magnesium Bisglycinate</p><p class="ingredient-form">80 mg — conservative daily dose</p></div>
+                <p class="ingredient-benefit">Prostaglandin inhibition and cramp reduction. RCT-supported. Conservative dose appropriate for daily menstrual support.</p>
+              </div>
+              <div class="ingredient-row">
+                <div><p class="ingredient-name">Pyridoxal-5'-Phosphate</p><p class="ingredient-form">Vitamin B6 — active P5P form</p></div>
+                <p class="ingredient-benefit">PMS mood support. Reduces luteal phase anxiety. Active form — no conversion step needed.</p>
+              </div>
+              <div class="ingredient-row">
+                <div><p class="ingredient-name">rTG Fish Oil</p><p class="ingredient-form">DHA + EPA — 100 mg re-esterified triglyceride</p></div>
+                <p class="ingredient-benefit">Reduces inflammatory prostaglandins driving dysmenorrhoea. rTG form absorbs ~70% better than ethyl ester. Non-vegan — declared on label.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn-buy" style="--accent:var(--raspberry);color:var(--off-white)" onclick="openModal('Menstrual &amp; Iron Support', 'var(--raspberry)')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          Buy Now
+        </button>
+      </div>
+
+      <!-- DAILY -->
+      <div class="product-panel" id="panel-daily" data-accent="var(--rose)" data-name="Daily Foundational Multi">
+        <p class="panel-moment">
+          Every morning.<br/>
+          <em>The ritual that earns the rest of your day.</em>
+        </p>
+
+        <div class="panel-helps">
+          <p class="panel-helps-label">What it helps with</p>
+          <ul class="panel-helps-list">
+            <li>Complete daily nutrition</li>
+            <li>Immunity &amp; energy</li>
+            <li>Skin, hair &amp; vitality</li>
+            <li>Thyroid &amp; metabolic health</li>
+            <li>Antioxidant defence</li>
+          </ul>
+        </div>
+
+        <div class="panel-meta">
+          <div class="panel-meta-item">
+            <p class="panel-meta-label">Flavour</p>
+            <p class="panel-meta-value">Watermelon Rose · Amras Chilli</p>
+          </div>
+          <div class="panel-meta-item">
+            <p class="panel-meta-label">Size</p>
+            <p class="panel-meta-value">500 ml · 200 ml</p>
+          </div>
+          <div class="panel-meta-item">
+            <p class="panel-meta-label">Format</p>
+            <p class="panel-meta-value">Liquid · Daily</p>
+          </div>
+        </div>
+
+        <div class="accordion" id="acc-daily">
+          <button class="accordion-trigger" onclick="toggleAccordion('acc-daily')">
+            <span class="accordion-trigger-label">17 bioavailable nutrients</span>
+            <svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="accordion-body">
+            <div class="ingredients-list">
+              <div class="ingredient-row">
+                <div><p class="ingredient-name">Cholecalciferol</p><p class="ingredient-form">Vitamin D3 — 800 IU · 100% daily value</p></div>
+                <p class="ingredient-benefit">Full daily dose. Gold-standard D3, fat-soluble and emulsified. The most commonly deficient nutrient.</p>
+              </div>
+              <div class="ingredient-row">
+                <div><p class="ingredient-name">Methylcobalamin</p><p class="ingredient-form">Vitamin B12 — active form</p></div>
+                <p class="ingredient-benefit">Active, directly usable form. Light and heat sensitive — processed at low temperature.</p>
+              </div>
+              <div class="ingredient-row">
+                <div><p class="ingredient-name">Calcium L-5-MTHF</p><p class="ingredient-form">Folate — bioavailable form</p></div>
+                <p class="ingredient-benefit">Directly usable by people with MTHFR variants. Superior to folic acid across the board.</p>
+              </div>
+              <div class="ingredient-row">
+                <div><p class="ingredient-name">Zinc Bisglycinate</p><p class="ingredient-form">6 mg · ~55% daily value</p></div>
+                <p class="ingredient-benefit">~40% absorption. No metallic taste. Immune function, skin health, daily compliance driver.</p>
+              </div>
+              <div class="ingredient-row">
+                <div><p class="ingredient-name">Selenomethionine</p><p class="ingredient-form">Selenium — organic form · ~90% bioavailability</p></div>
+                <p class="ingredient-benefit">Antioxidant defence, thyroid function, immune support. Organic form absorbs nearly twice as well as selenite.</p>
+              </div>
+              <div class="ingredient-row">
+                <div><p class="ingredient-name">D-Biotin</p><p class="ingredient-form">300 mcg · skin, hair &amp; nail support</p></div>
+                <p class="ingredient-benefit">Functional dose — not the inflated cosmetic market dose. Kept appropriate for a serious daily multi.</p>
+              </div>
+              <div class="ingredient-row">
+                <div><p class="ingredient-name">Full B-Complex</p><p class="ingredient-form">B1 · B2 · B3 · B5 · B6 · all active forms</p></div>
+                <p class="ingredient-benefit">Every B-vitamin in its active, bioavailable form. Energy metabolism, neurological function, adrenal support.</p>
+              </div>
+              <div class="ingredient-row">
+                <div><p class="ingredient-name">+ 10 more nutrients</p><p class="ingredient-form">Vitamin A · C · E · K2 · Iodine · Chromium · Inositol · MSM</p></div>
+                <p class="ingredient-benefit">Complete nutritional coverage. Every ingredient chosen for bioavailability, not cost. Active forms only.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn-buy" style="--accent:var(--rose)" onclick="openModal('Daily Foundational Multi', 'var(--rose)')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          Buy Now
+        </button>
+      </div>
+
+    </div><!-- /panels -->
+  </div><!-- /layout -->
+</section>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal-overlay" onclick="handleOverlayClick(event)">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="modal-close" onclick="closeModal()" aria-label="Close">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+
+    <div id="modal-main">
+      <div class="modal-accent-dot" id="modal-dot"></div>
+      <span class="modal-product-tag" id="modal-product-tag"></span>
+      <h2 id="modal-title">Launching <em>soon.</em></h2>
+      <p class="modal-sub">
+        Leave your details and you'll be the first to know when this drops —
+        along with early access and launch pricing.
+      </p>
+
+      <!-- ⚙️ TO ENABLE REAL SUBMISSIONS:
+           Replace the form action with your Formspree endpoint:
+           <form action="https://formspree.io/f/YOUR_ID" method="POST">
+           Or use Netlify Forms by adding netlify attribute.
+           Submissions are stored in localStorage as backup. -->
+      <form class="modal-form" id="modal-form" onsubmit="handleModalSubmit(event)" novalidate>
+        <div class="modal-field">
+          <label for="modal-name">Your name</label>
+          <input type="text" id="modal-name" name="name" placeholder="First name" required autocomplete="given-name"/>
+        </div>
+        <div class="modal-field">
+          <label for="modal-email">Email address</label>
+          <input type="email" id="modal-email" name="email" placeholder="you@email.com" required autocomplete="email"/>
+        </div>
+        <div class="modal-field">
+          <label for="modal-phone">Phone number</label>
+          <input type="tel" id="modal-phone" name="phone" placeholder="+91 98765 43210" required autocomplete="tel"/>
+        </div>
+        <input type="hidden" id="modal-product-input" name="product"/>
+        <button type="submit" class="modal-submit" id="modal-submit-btn">Notify me at launch</button>
+      </form>
+    </div>
+
+    <div class="modal-success" id="modal-success">
+      <div class="modal-success-icon" id="modal-success-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <h3>You're on the list.</h3>
+      <p>We'll reach out when this drops. Good things, quietly — and right on time.</p>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-logo">The Drops Co</span>
+  <ul class="footer-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <span class="footer-copy">© 2026 The Drops Co. All rights reserved.</span>
+</footer>
+
+<script>
+/* ── NAV scroll ── */
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+}, { passive: true });
+
+/* ── Product tabs ── */
+const tabBtns  = document.querySelectorAll('.tab-btn');
+const panels   = document.querySelectorAll('.product-panel');
+const section  = document.querySelector('.section-products');
+
+const ACCENT_COLORS = {
+  focus:     'rgba(217,198,58,0.06)',
+  active:    'rgba(223,92,34,0.06)',
+  menstrual: 'rgba(199,51,96,0.06)',
+  daily:     'rgba(217,129,138,0.06)',
+};
+
+tabBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const target = btn.dataset.product;
+    tabBtns.forEach(b => b.classList.remove('active'));
+    panels.forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('panel-' + target).classList.add('active');
+    section.style.background = `linear-gradient(135deg, var(--black) 70%, ${ACCENT_COLORS[target]} 100%)`;
+  });
+});
+
+/* ── Ingredient accordion ── */
+function toggleAccordion(id) {
+  const el = document.getElementById(id);
+  el.classList.toggle('open');
+}
+
+/* ── Modal ── */
+let currentProduct = '';
+let currentAccent  = '';
+
+function openModal(productName, accentVar) {
+  currentProduct = productName;
+  currentAccent  = accentVar;
+
+  const cleanName = productName.replace(/&amp;/g, '&');
+  document.getElementById('modal-product-tag').textContent = cleanName;
+  document.getElementById('modal-product-input').value = cleanName;
+
+  // Resolve CSS variable to hex for the dot
+  const colors = { 'var(--yellow)':'#D9C63A','var(--orange)':'#DF5C22','var(--raspberry)':'#C73360','var(--rose)':'#D9818A' };
+  document.getElementById('modal-dot').style.background = colors[accentVar] || '#D9C63A';
+  document.getElementById('modal-success-icon').style.background = colors[accentVar] || '#D9C63A';
+  document.getElementById('modal-success-icon').style.color = (accentVar === 'var(--raspberry)' || accentVar === 'var(--orange)') ? '#F3EFE7' : '#09080A';
+
+  // Reset state
+  document.getElementById('modal-main').style.display = 'block';
+  document.getElementById('modal-success').style.display = 'none';
+  document.getElementById('modal-form').reset();
+  document.getElementById('modal-submit-btn').disabled = false;
+  document.getElementById('modal-submit-btn').textContent = 'Notify me at launch';
+
+  document.getElementById('modal-overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('modal-overlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function handleOverlayClick(e) {
+  if (e.target === document.getElementById('modal-overlay')) closeModal();
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+async function handleModalSubmit(e) {
+  e.preventDefault();
+  const btn   = document.getElementById('modal-submit-btn');
+  const name  = document.getElementById('modal-name').value.trim();
+  const email = document.getElementById('modal-email').value.trim();
+  const phone = document.getElementById('modal-phone').value.trim();
+
+  if (!name || !email || !phone) return;
+
+  btn.disabled = true;
+  btn.textContent = 'Saving…';
+
+  // Store in localStorage (backup / admin view)
+  const leads = JSON.parse(localStorage.getItem('tdc_leads') || '[]');
+  leads.push({ name, email, phone, product: currentProduct, timestamp: new Date().toISOString() });
+  localStorage.setItem('tdc_leads', JSON.stringify(leads));
+
+  // ── Uncomment + replace endpoint to POST to Formspree ──
+  // try {
+  //   await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+  //     method: 'POST',
+  //     headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+  //     body: JSON.stringify({ name, email, phone, product: currentProduct })
+  //   });
+  // } catch(err) { console.warn('Formspree unavailable', err); }
+
+  // Simulate network delay
+  await new Promise(r => setTimeout(r, 900));
+
+  document.getElementById('modal-main').style.display = 'none';
+  document.getElementById('modal-success').style.display = 'block';
+}
+
+/* ── Scroll reveal ── */
+const revealEls = document.querySelectorAll('.reveal');
+const revealObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); } });
+}, { threshold: 0.12 });
+revealEls.forEach(el => revealObs.observe(el));
+</script>
+</body>
+</html>
