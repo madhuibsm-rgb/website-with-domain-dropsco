@@ -2,7 +2,7 @@
   "rewrites": [
     { "source": "/about",   "destination": "/about.html"   },
     { "source": "/contact", "destination": "/contact.html" },
-    {"source": "/brain-drops", "destination": "brain-drops.vercel.app" }
+    {"source": "/brain-drops", "destination": "https://brain-drops.vercel.app/" }
   ],
   "headers": [
     {
