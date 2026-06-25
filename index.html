@@ -121,7 +121,7 @@
        Set up a Google Apps Script web app (see GOOGLE-SHEETS-SETUP.md), then
        paste its deployment URL below. It looks like:
        https://script.google.com/macros/s/AKfycb..../exec  */
-    var SHEET_ENDPOINT = "https://script.google.com/macros/s/AKfycby5XzH2FIxOspfRht_vjLNaC4bfePNip-ZZTsgjM2HWTqa7kCMPHFfJNrbq1K75V8Rc/exec";
+    var SHEET_ENDPOINT = "https://script.google.com/macros/s/AKfycbw7qLYZOLTO-6_9Td2tI1U0JUdS_V6alMETeIAp5UR3EE0V68ebU4EuXq2WU9z_Wbx-/exec";
 
     var form = document.getElementById('notify');
     var note = document.getElementById('note');
@@ -134,7 +134,7 @@
         note.className = 'note'; note.textContent = 'Please enter a valid email address.'; return;
       }
       if(SHEET_ENDPOINT.indexOf('PASTE_YOUR') !== -1){
-        note.className = 'note ok'; note.textContent = "You're on the list! (Connect Google Sheets to start saving emails.)";
+        note.className = 'note ok'; note.textContent = "You're on the list!";
         form.reset(); return;
       }
       button.disabled = true;
