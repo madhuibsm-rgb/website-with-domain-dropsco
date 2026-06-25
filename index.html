@@ -134,7 +134,7 @@
         note.className = 'note'; note.textContent = 'Please enter a valid email address.'; return;
       }
       if(SHEET_ENDPOINT.indexOf('PASTE_YOUR') !== -1){
-        note.className = 'note ok'; note.textContent = "You're on the list!";
+        note.className = 'note ok'; note.textContent = "Thank you for your interest. You're on the list!";
         form.reset(); return;
       }
       button.disabled = true;
