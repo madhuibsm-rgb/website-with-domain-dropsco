@@ -1,170 +1,455 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-C45YY23HSF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-PZGMQ93J');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  gtag('config', 'G-C45YY23HSF');
-</script>
-  <style>
-  <title>The Drops Co. — Coming Soon </title>
-  <meta name="description" content="The Drops Co. — Dropping into your day soon. Join the list to be first." />
-  <link rel="icon" href="logo.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
-  <style>
-    :root{
-      --gold:#f3c14c; --gold-soft:#f7d77f; --cream:#fbf6ec;
-      --burgundy:#5b1f23; --ink:#2a2422; --taupe:#9a7f62; --line:#e8ddc8;
-    }
-    *{margin:0;padding:0;box-sizing:border-box;}
-    html,body{height:100%;}
-    body{
-      background:var(--gold);
-      font-family:"Jost",system-ui,sans-serif;
-      color:var(--ink);
-      min-height:100vh;
-      display:flex;align-items:center;justify-content:center;
-      padding:24px;
-      -webkit-font-smoothing:antialiased;
-      position:relative;overflow:hidden;
-    }
-    body::before,body::after{
-      content:"";position:absolute;background:rgba(255,255,255,.12);
-      transform:rotate(18deg);border-radius:40px;pointer-events:none;
-    }
-    body::before{width:520px;height:520px;top:-160px;left:-120px;}
-    body::after{width:420px;height:420px;bottom:-160px;right:-100px;transform:rotate(-12deg);}
+    <title>The Drops Co.</title>
 
-    .card{
-      position:relative;z-index:1;width:min(1040px,100%);
-      background:var(--cream);border-radius:28px;
-      box-shadow:0 40px 90px rgba(74,30,20,.18);
-      padding:clamp(28px,4vw,56px);
-      opacity:0;transform:translateY(14px);
-      animation:rise 1.1s cubic-bezier(.2,.7,.2,1) forwards;
-    }
-    .brand{display:flex;align-items:center;gap:9px;margin-bottom:clamp(20px,3vw,36px);}
-    .brand .dot{width:14px;height:18px;background:var(--burgundy);border-radius:50% 50% 50% 50%/60% 60% 40% 40%;transform:rotate(-8deg);}
-    .brand span{font-family:"Jost",sans-serif;font-weight:500;letter-spacing:.22em;text-transform:uppercase;font-size:.82rem;color:var(--burgundy);}
+    <link rel="icon" href="assets/favicon.ico" sizes="any">
 
-    .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(24px,4vw,48px);align-items:center;}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    .eyebrow{font-family:"Jost",sans-serif;font-weight:400;letter-spacing:.34em;text-transform:uppercase;font-size:.78rem;color:var(--taupe);margin-bottom:1.1rem;}
-    h1{font-family:"Fraunces",Georgia,serif;font-weight:500;font-size:clamp(2.1rem,5.2vw,3.4rem);line-height:1.08;color:var(--burgundy);margin-bottom:1rem;}
-    h1 em{font-style:italic;color:var(--gold);font-weight:500;}
-    .lead{font-family:"Jost",sans-serif;font-weight:300;font-size:clamp(1rem,2.4vw,1.12rem);line-height:1.6;color:var(--ink);max-width:32ch;margin-bottom:1.8rem;}
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Sans:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Montserrat:wght@400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
 
-    form{display:flex;gap:10px;flex-wrap:wrap;max-width:440px;}
-    input[type=email]{
-      flex:1;min-width:200px;padding:14px 18px;border:1px solid var(--line);
-      border-radius:12px;background:#fff;font-family:"Jost",sans-serif;font-size:1rem;color:var(--ink);
-    }
-    input[type=email]:focus{outline:none;border-color:var(--burgundy);box-shadow:0 0 0 3px rgba(91,31,35,.12);}
-    button{
-      padding:14px 26px;border:none;border-radius:12px;background:var(--burgundy);color:var(--cream);
-      font-family:"Jost",sans-serif;font-weight:500;font-size:1rem;letter-spacing:.02em;cursor:pointer;transition:transform .15s,background .2s;
-    }
-    button:hover{background:#471619;transform:translateY(-1px);}
-    button:disabled{opacity:.6;cursor:default;transform:none;}
-    .note{font-family:"Jost",sans-serif;font-size:.82rem;color:var(--taupe);margin-top:.9rem;min-height:1.2em;}
-    .note.ok{color:#3b6d11;}
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
 
-    .social{margin-top:2rem;}
-    .social p{font-family:"Jost",sans-serif;font-weight:400;letter-spacing:.28em;text-transform:uppercase;font-size:.7rem;color:var(--taupe);margin-bottom:.7rem;}
-    .social a{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid var(--line);border-radius:50%;margin-right:8px;color:var(--burgundy);transition:background .2s,color .2s;}
-    .social a:hover{background:var(--burgundy);color:var(--cream);}
-    .social svg{width:16px;height:16px;fill:currentColor;}
+    <link rel="stylesheet" href="style.css">
 
-    .visual{position:relative;display:flex;align-items:center;justify-content:center;min-height:240px;}
-    .blob{position:absolute;width:88%;max-width:380px;aspect-ratio:1/1;background:var(--gold-soft);border-radius:46% 54% 49% 51%/55% 47% 53% 45%;z-index:0;}
-    .visual img{position:relative;z-index:1;width:min(360px,84%);height:auto;border-radius:12px;}
-
-    @keyframes rise{to{opacity:1;transform:translateY(0);}}
-    @media (max-width:760px){
-      .grid{grid-template-columns:1fr;}
-      .visual{order:-1;min-height:200px;}
-      form{max-width:none;}
-    }
-    @media (prefers-reduced-motion:reduce){.card{animation:none;opacity:1;transform:none;}}
-  </style>
 </head>
+
 <body>
-  <main class="card">
-    <div class="brand"><span class="dot"></span><span>The Drops Co.</span></div>
-    <div class="grid">
-      <section>
-        <p class="eyebrow">Coming Soon</p>
-        <h1>Good things are <em>dropping</em> soon.</h1>
-        <p class="lead">Thoughtfully crafted supplements for focus, energy, and everyday balance. Join the list and be first to know when we launch.</p>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PZGMQ93J" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- HERO VIDEO -->
 
-        <form id="notify" novalidate>
-          <input type="email" id="email" name="email" placeholder="Enter your email" required autocomplete="email" />
-          <button type="submit">Notify me</button>
-        </form>
-        <p class="note" id="note"></p>
+    <section class="hero" id="top">
 
-        <div class="social">
-          <p>Follow along</p>
-          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .4 1.4.9.5.4.7.8.9 1.4.1.4.3 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.4 2.2-.2.6-.4 1-.9 1.4-.4.5-.8.7-1.4.9-.4.1-1 .3-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.4-1.4-.9-.5-.4-.7-.8-.9-1.4-.1-.4-.3-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.8.4-2.2.2-.6.4-1 .9-1.4.4-.5.8-.7 1.4-.9.4-.1 1-.3 2.2-.4C8.4 2.2 8.8 2.2 12 2.2Zm0 1.8c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.4-.5.2-.9.4-1.3.8-.4.4-.6.8-.8 1.3-.2.4-.3 1-.4 2.1-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c.1 1.1.2 1.7.4 2.1.2.5.4.9.8 1.3.4.4.8.6 1.3.8.4.2 1 .3 2.1.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.4.5-.2.9-.4 1.3-.8.4-.4.6-.8.8-1.3.2-.4.3-1 .4-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.7-.4-2.1-.2-.5-.4-.9-.8-1.3-.4-.4-.8-.6-1.3-.8-.4-.2-1-.3-2.1-.4-1.2-.1-1.6-.1-4.7-.1Zm0 3.1a4.9 4.9 0 1 1 0 9.8 4.9 4.9 0 0 1 0-9.8Zm0 1.8a3.1 3.1 0 1 0 0 6.2 3.1 3.1 0 0 0 0-6.2Zm5.1-.3a1.15 1.15 0 1 1-2.3 0 1.15 1.15 0 0 1 2.3 0Z"/></svg></a>
-          <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M16.5 3c.3 2 1.5 3.6 3.5 3.9v2.4c-1.2.1-2.4-.2-3.5-.8v5.8c0 3.3-2.6 5.7-5.7 5.7A5.6 5.6 0 0 1 5.3 14c0-3.1 2.7-5.6 5.9-5.3v2.5c-.4-.1-.8-.2-1.1-.2-1.6 0-2.9 1.3-2.9 3s1.3 2.9 2.9 2.9 2.9-1.3 2.9-3V3h3.5Z"/></svg></a>
-          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.3-1.5 1.6-1.5h1.6V3.6c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.3H7.8V13h2.7v8h3Z"/></svg></a>
+        <div class="video-wrapper">
+
+            <video autoplay muted loop playsinline>
+
+                <source src="assets/hero.mp4" type="video/mp4">
+
+            </video>
+
         </div>
-      </section>
 
-      <section class="visual">
-        <div class="blob"></div>
-        <img src="logo.png" alt="The Drops Co." />
-      </section>
+        <header>
+
+            <button class="menu" id="site-menu-button" type="button" aria-expanded="false" aria-controls="site-menu"
+                aria-label="Open site navigation"><span></span><span></span><span></span></button>
+
+            <div class="logo logo-left">
+                <img src="assets/logo.png" alt="The Drops Co.">
+            </div>
+
+        </header>
+
+        <nav class="site-menu-drawer" id="site-menu" aria-label="Site navigation" hidden>
+            <button class="site-menu-close" type="button" aria-label="Close site navigation">×</button>
+            <p>THE DROPS CO.</p>
+            <a href="#top">Home</a>
+
+            <a href="#reading-title">What we’re reading</a>
+            <a href="about.html">About</a>
+        </nav>
+
+        <div class="hero-content">
+            <h1 class="hero-title" id="hero-title">
+                <span class="hero-main-line">We're building a long table.</span>
+                <span class="hero-subtitle-line">There's a seat for you.</span>
+            </h1>
+        </div>
+
+    </section>
+
+    <!-- MADE BY WOMEN SECTION -->
+    <section class="women-section">
+        <div class="women-content-wrapper">
+            <!-- Two column layout -->
+            <div class="women-grid">
+                <!-- LEFT COLUMN -->
+                <article class="women-left">
+                    <div class="women-eyebrow">
+                        <div class="eyebrow-line"></div>
+                        <div class="eyebrow-text">Somewhere between 6:15 AM and 11:00 PM</div>
+                    </div>
+                    <!-- Main heading -->
+                    <h1 class="women-main-title">You're good at your job in a way you <em class="title-emphasis">don't
+                            say out loud</em> very often.</h1>
+
+                    <!-- Body content -->
+                    <div class="women-body">
+                        <p class="women-body-lead">You're the one who knows.</p>
+
+                        <p class="women-body-detail">His cart is open and he's asking what else. You know what else —
+                            the curd, not the one on offer. The biscuits his mother actually eats.</p>
+                        <p class="women-body-detail">You took the call at 7:40 from the car park. By eleven, three
+                            people were working on a decision you'd made.</p>
+                        <p class="women-body-detail">You found out at nine last night about the solar system model. It
+                            got made.</p>
+                        <p class="women-body-detail">At eleven you close the door. Ten minutes, the same book, the same
+                            tea. Nobody knows about this part, and that's rather the point.</p>
+
+                    </div>
+                </article>
+
+                <!-- RIGHT COLUMN -->
+                <aside class="women-right">
+                    <div class="women-image-container">
+                        <img src="assets/womansitting.jpg" alt="Woman sitting in an everyday moment"
+                            class="women-image">
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <div class="women-to-table-strip" role="presentation">
+        <p>Every one of them is you. Not one of them is all of you.</p>
     </div>
-  </main>
 
-  <script>
-    /* Email capture → Google Sheets.
-       Set up a Google Apps Script web app (see GOOGLE-SHEETS-SETUP.md), then
-       paste its deployment URL below. It looks like:
-       https://script.google.com/macros/s/AKfycb..../exec  */
-    var SHEET_ENDPOINT = "https://script.google.com/macros/s/AKfycbw7qLYZOLTO-6_9Td2tI1U0JUdS_V6alMETeIAp5UR3EE0V68ebU4EuXq2WU9z_Wbx-/exec";
+    <!-- BUILDING A LONG TABLE SECTION -->
+    <section class="long-table-section">
+        <!-- BACKGROUND IMAGE -->
+        <div class="background-image">
+            <img src="assets/table cheers.jpg" alt="Women sitting together around a long table">
+        </div>
 
-    var form = document.getElementById('notify');
-    var note = document.getElementById('note');
-    var button = form.querySelector('button');
+        <div class="content">
+            <!-- HEADLINE -->
+            <h1 class="main-heading">So we're <em>setting</em><br>a Long table.</h1>
 
-    form.addEventListener('submit', function(e){
-      e.preventDefault();
-      var email = document.getElementById('email').value.trim();
-      if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){
-        note.className = 'note'; note.textContent = 'Please enter a valid email address.'; return;
-      }
-      if(SHEET_ENDPOINT.indexOf('PASTE_YOUR') !== -1){
-        note.className = 'note ok'; note.textContent = "Thank you for your Interest. You're on the list!";
-        form.reset(); return;
-      }
-      button.disabled = true;
-      note.className = 'note'; note.textContent = 'Adding you to the list…';
-      /* mode:'no-cors' + URLSearchParams sends a "simple" request with no CORS
-         preflight, so it reaches Apps Script. The response is opaque, so a
-         completed request is treated as success. */
-      fetch(SHEET_ENDPOINT, {
-        method:'POST',
-        mode:'no-cors',
-        body:new URLSearchParams({ email: email })
-      }).then(function(){
-        note.className='note ok'; note.textContent="You're on the list — we'll be in touch.";
-        form.reset();
-      }).catch(function(){
-        note.className='note'; note.textContent='Something went wrong. Please try again.';
-      }).finally(function(){
-        button.disabled = false;
-      });
-    });
-  </script>
+            <!-- EDITORIAL TEXT AREA -->
+            <div class="text-layout">
+                <!-- LEFT -->
+                <div class="intro-copy">
+                    <p>Not for a part of you. For the whole of you at once, which is a thing that almost never gets to
+                        sit down. Long, because it doesn’t stop at the first sitting. Someone brings a friend, someone
+                        leaves with one. Nobody here needs convincing. Nobody’s here to be fixed. Titles stay at the
+                        door — you know better than anyone that the more alive parts of you are somewhere else entirely.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="long-table-collage" aria-label="Photo collage placeholders">
+            <div class="collage-photo collage-image-1"><img src="assets/collageimage1.png"
+                    alt="Friends overlooking the coast"></div>
+            <div class="collage-photo collage-image-2"><img src="assets/collageimage2.png"
+                    alt="Woman walking by the sea"></div>
+            <div class="collage-photo collage-image-3"><img src="assets/collageimage3.png"
+                    alt="Friends sharing a moment"></div>
+            <div class="collage-photo collage-image-4"><img src="assets/collageimage4.jpg" alt="Woman in the city">
+            </div>
+            <div class="collage-photo collage-image-5"><img src="assets/collageimage5.jpg"
+                    alt="Friends exploring together"></div>
+            <div class="collage-photo collage-image-6"><img src="assets/collageimage6.jpg" alt="Bird in the sky"></div>
+            <div class="collage-photo collage-image-7"><img src="assets/collageimage7.jpg"
+                    alt="Coffee and a book in a garden"></div>
+            <div class="collage-photo collage-image-8"><img src="assets/collageimage8.jpg"
+                    alt="Preparing a long table outdoors"></div>
+            <div class="collage-photo collage-image-9"><img src="assets/collageimage9.jpeg"
+                    alt="An outdoor table gathering"></div>
+        </div>
+
+    </section>
+
+    <!-- WHO'S SETTING THE TABLE SCROLL SECTION -->
+    <section class="scroll-section" id="scrollSection">
+        <div class="sticky">
+            <!-- STATIC EDITORIAL QUESTION -->
+            <div class="question-stage">
+                <div class="question-row" id="questionRow">
+                    <span class="question-word" id="wordWho">Who's</span>
+                    <span class="question-word" id="wordSetting">setting</span>
+                    <span class="question-word" id="wordThe">the</span>
+                    <span class="question-word" id="wordTable">table?</span>
+                </div>
+            </div>
+
+            <!-- FINAL CONTENT -->
+            <div class="final-content" id="finalContent">
+                <!-- TWO LINE HEADING -->
+                <h1 class="heading" id="heading">
+                    <span class="heading-line">We're building a supplement brand for women. The same women we're
+                        building this table for.</span>
+                </h1>
+
+                <!-- BODY -->
+                <div class="body-area" id="bodyArea">
+                    <p class="body-copy">Which is to say not a demographic to capture, not a statistic to sell into. A
+                        woman whose life keeps moving. Roles that shift by the decade and by the hour. A body doing its
+                        own shifting underneath all of it hormones, sleep, energy, the parts nobody prepared her for and
+                        very few people explain properly.</p>
+                </div>
+
+                <!-- ENDING -->
+                <div class="quote-area" id="quoteArea">
+                    <div class="ending">
+                        <div class="ending-title">So we started here.</div>
+                        <div class="ending-sub">The product comes later.</div>
+                        <a href="#" class="community-cta JoinCommunity" id="joinCommunityBtn">
+                            <span>Join the community</span>
+                            <span class="cta-arrow">↗</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IMAGE SECTION -->
+
+    <section class="image-section">
+
+        <a class="story-panel panel-climb" id="climb" href="#climb" aria-label="Explore The Climb">
+            <span class="story-placeholder">Add image: The Climb</span>
+            <span class="story-title">
+                <span class="title-first">THE</span>
+                <span class="title-main">CLIMB</span>
+            </span>
+            <span class="story-subtitle">Work | Ambition | The Load Of Leading</span>
+        </a>
+
+        <a class="story-panel panel-love" id="love" href="#love" aria-label="Explore Her People">
+            <span class="story-placeholder">Add image: Her People</span>
+            <span class="story-title">
+                <span class="title-first">HER</span>
+                <span class="title-main">PEOPLE</span>
+            </span>
+            <span class="story-subtitle">Partner | Kids | Parents | The Invisible Load</span>
+        </a>
+
+        <a class="story-panel panel-self" id="self" href="#self" aria-label="Explore The Self">
+            <span class="story-placeholder">Add image: The Self</span>
+            <span class="story-title">
+                <span class="title-first">THE</span>
+                <span class="title-main">SELF</span>
+            </span>
+            <span class="story-subtitle">Identity | Joy | Friends</span>
+        </a>
+
+        <a class="story-panel panel-ambition" id="ambition" href="#ambition" aria-label="Explore The Explorer">
+            <span class="story-placeholder">Add image: The Explorer</span>
+            <span class="story-title">
+                <span class="title-first">THE</span>
+                <span class="title-main">EXPLORER</span>
+            </span>
+            <span class="story-subtitle">Travel | Sports | Passions | Beyond Work</span>
+        </a>
+
+        <div class="story-statement" aria-label="The Drops Co. mission">
+            <!-- Text content will be dynamically added on hover via JavaScript -->
+        </div>
+
+    </section>
+
+    <!-- TAKE A SEAT SECTION -->
+    <section class="take-seat-section" aria-labelledby="take-seat-title">
+        <div class="take-seat-shell">
+            <div class="take-seat-kicker"><span></span> A PLACE AT THE TABLE <span></span></div>
+            <div class="take-seat-grid">
+                <div class="take-seat-column">
+                    <article class="take-seat-card take-seat-intro">
+                        <p>Not the composed one. Whoever actually turns up, come alone or bring someone. Either way, the
+                            table gets longer.</p>
+                    </article>
+                    <article class="take-seat-card take-seat-chair-card">
+                        <p class="chair-card-title" id="take-seat-title">THE SEAT</p>
+                        <p class="chair-seat-copy">There’s a seat for <em>whoever you are today.</em></p>
+                        <img class="chair-illustration" src="assets/chair.png" alt="Illustration of a chair">
+                    </article>
+                </div>
+                <div class="take-seat-column">
+                    <article class="take-seat-card take-seat-truth">
+                        <p class="take-seat-reading-copy">You don't have to be at the table to get one. Things worth
+                            knowing. Not things to buy.</p>
+                    </article>
+                    <article class="take-seat-card take-seat-invitation">
+                        <p>Made by women, for a woman who wants <em>straight answers.</em></p>
+                        <a class="take-seat-cta"  href="#" id="takeaSeat">Take a seat <span aria-hidden="true">↗</span></a>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reading-section" aria-labelledby="reading-title">
+        <div class="reading-heading">
+            <p>Latest Stories</p>
+            <h2 id="reading-title">What We’re Reading</h2>
+        </div>
+
+        <div class="reading-grid">
+            <article class="reading-card reading-card--primary" role="link" tabindex="0"
+                aria-label="Read The Curious Case of the World's Healthiest Plates">
+                <div class="article-image-placeholder"><img src="assets/article-food.jpg"
+                        alt="A selection of food dishes on blue plates"></div>
+                <div class="article-tags"><span>The Self</span><span>Women</span></div>
+                <h3>The Curious Case of the World’s Healthiest Plates</h3>
+                <p>What the longevity diets actually share — once you get past the magic.</p>
+                <div class="article-footer"><span>9 min read</span><a href="article-healthiest-plates.html">Read more
+                        →</a></div>
+            </article>
+
+            <article class="reading-card reading-card--featured reading-card--coffee" role="link" tabindex="0"
+                aria-label="Read The Curious Case of Your 3 PM Coffee">
+                <div class="article-image-placeholder"><img src="assets/article-coffee.jpg"
+                        alt="A cup of coffee by a rainy window"></div>
+                <div class="article-tags"><span>Editor’s pick</span><span>Science</span></div>
+                <h3>The Curious Case of Your 3 PM Coffee</h3>
+                <p>Why the afternoon cup stops working — and what’s actually going on.</p>
+                <div class="article-footer"><span>8 min read</span><a href="article-3pm-coffee.html">Read more →</a>
+                </div>
+            </article>
+
+            <article class="reading-card" role="link" tabindex="0"
+                aria-label="Read They Changed the Name. The Part Worth Noticing Is Why">
+                <div class="article-image-placeholder"><img src="assets/They Changed the Name ARTICLE CARD IMAGE.jpg"
+                        alt="A pregnancy test, pacifier, and pink calendars on a white surface"></div>
+                <div class="article-tags"><span>Women's Health</span><span>Science</span></div>
+                <h3>They Changed the Name. The Part Worth Noticing Is Why</h3>
+                <p>Cycle syncing isn’t a trend — it’s The old name pointed to the ovaries. The new one points to what
+                    matters more — and why that changes everything.</p>
+                <div class="article-footer"><span>12 min read</span><a href="article-pcos-rename.html">Read more →</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- QUIZ SECTION -->
+    <section class="quiz-section" id="quiz-section">
+        <div class="quiz-container">
+            <div class="quiz" id="quiz-body">
+                <!-- Quiz content will be dynamically inserted here -->
+            </div>
+            <div class="quiz-progress-container">
+                <div class="quiz-marks" id="quiz-marks"></div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="site-footer-main">
+        <div class="footer-main-grid">
+            <section class="footer-brand" id="about">
+                <img src="assets/logo.png" alt="The Drops Co.">
+                <p>The Drops Co. is a home for the four quiet pillars of a well-lived life — Climb, Self, Love, and
+                    Ambition. One drop of reflection at a time.</p>
+                <div class="footer-socials"><a href="https://www.instagram.com/thedropsco/" target="_blank"
+                        rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"
+                            focusable="false">
+                            <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                            <circle cx="12" cy="12" r="4"></circle>
+                            <circle class="social-dot" cx="17.35" cy="6.65" r="1"></circle>
+                        </svg></a><a href="https://www.facebook.com/people/The-Drops-Co/61591977626759/" target="_blank"
+                        rel="noopener noreferrer" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"
+                            focusable="false">
+                            <path
+                                d="M13.7 21v-8h2.7l.4-3.1h-3.1V7.92c0-.9.25-1.51 1.55-1.51h1.65V3.63c-.28-.04-1.24-.12-2.36-.12-2.33 0-3.93 1.42-3.93 4.04V9.9H8v3.1h2.56v8h3.14Z">
+                            </path>
+                        </svg></a><a href="https://www.linkedin.com/company/the-drops-co/" target="_blank"
+                        rel="noopener noreferrer" aria-label="LinkedIn">in</a></div>
+            </section>
+            <nav class="footer-pillars" aria-label="The pillars">
+                <h2>The Pillars</h2><a href="#climb">Climb</a><a href="#self">Self</a><a href="#love">Love</a><a
+                    href="#ambition">Ambition</a>
+            </nav>
+            <section class="footer-newsletter" aria-labelledby="newsletter-title">
+                <h2 id="newsletter-title">Get a drop in your inbox</h2>
+                <p>One short reflection, once a week. No noise, just something worth sitting with.</p>
+                <a href="#" class="community-cta JoinCommunity" style="font-size: 14px;background: #fdc666;color: #000000;padding: 10px 20px;border-radius: 20px;margin: 0;font-weight: 700;">
+                            <span>Join the community</span>
+                            <span class="cta-arrow">↗</span>
+                        </a>
+            </section>
+        </div>
+        <div class="footer-legal"><span>© 2026 The Drops Co. Built for quiet, steady growth.</span>
+            <div><a href="#climb">Climb</a><a href="#self">Self</a><a href="#love">Love</a><a
+                    href="#ambition">Ambition</a></div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+<script>
+(function (s, e, n, d, er) {
+    s['Sender'] = er;
+    s[er] = s[er] || function () {
+        (s[er].q = s[er].q || []).push(arguments)
+    }, s[er].l = 1 * new Date();
+    s[er].on = function(event, callback) {
+        s[er].listeners = s[er].listeners || {};
+        (s[er].listeners[event] = s[er].listeners[event] || []).push(callback);
+    };
+    var a = e.createElement(n),
+        m = e.getElementsByTagName(n)[0];
+    a.async = 1;
+    a.src = d;
+    m.parentNode.insertBefore(a, m)
+})(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
+
+sender('236c6496731773');
+
+document.getElementById('joinCommunityBtn').addEventListener('click', function(e) {
+    e.preventDefault();
+
+    // Open Sender popup
+    sender('popup', 'open');
+});
+</script>
+<script>
+(function (s, e, n, d, er) {
+    s['Sender'] = er;
+    s[er] = s[er] || function () {
+        (s[er].q = s[er].q || []).push(arguments)
+    }, s[er].l = 1 * new Date();
+
+    s[er].on = function(event, callback) {
+        s[er].listeners = s[er].listeners || {};
+        (s[er].listeners[event] = s[er].listeners[event] || []).push(callback);
+    };
+
+    var a = e.createElement(n),
+        m = e.getElementsByTagName(n)[0];
+
+    a.async = 1;
+    a.src = d;
+    m.parentNode.insertBefore(a, m);
+
+})(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
+
+sender('236c6496731773');
+
+document.getElementById('takeaSeat').addEventListener('click', function(e) {
+    e.preventDefault();
+
+    // Open Sender popup
+    sender('popup', 'open');
+});
+</script>
+
+
 </body>
+
 </html>
