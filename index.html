@@ -139,9 +139,9 @@ const GOOGLE_SCRIPT_URL =
   "https://script.google.com/macros/s/AKfycbx5mh_iOU3crZ3fDpkgaGNpX4dTyQrg6ZpYKWkJydIIwwm-aIU1u_HSQEE899PWNrPUsg/exec";
 
 
-const form = document.getElementById("emailForm");
+const form = document.getElementById("notify");
 const emailInput = document.getElementById("email");
-const message = document.getElementById("formMessage");
+const message = document.getElementById("note");
 
 
 form.addEventListener("submit", async function(e) {
@@ -159,37 +159,39 @@ form.addEventListener("submit", async function(e) {
   message.textContent = "Submitting...";
 
 
-  const params =
-    new URLSearchParams(window.location.search);
+  // Capture and persist first-touch attribution parameters.
+  const params = new URLSearchParams(window.location.search);
+  const attributionKeys = [
+    "utm_source",
+    "utm_medium",
+    "utm_campaign",
+    "utm_term",
+    "utm_content",
+    "gclid",
+    "fbclid"
+  ];
 
+  attributionKeys.forEach(function(key) {
+    const value = params.get(key);
+    if (value) {
+      localStorage.setItem("drops_" + key, value);
+    }
+  });
+
+  const getStored = function(key) {
+    return localStorage.getItem("drops_" + key) || "";
+  };
 
   const leadData = {
-
     email: email,
-
     page_url: window.location.href,
-
-    utm_source:
-      params.get("utm_source") || "",
-
-    utm_medium:
-      params.get("utm_medium") || "",
-
-    utm_campaign:
-      params.get("utm_campaign") || "",
-
-    utm_term:
-      params.get("utm_term") || "",
-
-    utm_content:
-      params.get("utm_content") || "",
-
-    gclid:
-      params.get("gclid") || "",
-
-    fbclid:
-      params.get("fbclid") || ""
-
+    utm_source: getStored("utm_source"),
+    utm_medium: getStored("utm_medium"),
+    utm_campaign: getStored("utm_campaign"),
+    utm_term: getStored("utm_term"),
+    utm_content: getStored("utm_content"),
+    gclid: getStored("gclid"),
+    fbclid: getStored("fbclid")
   };
 
 
@@ -211,6 +213,7 @@ form.addEventListener("submit", async function(e) {
     });
 
 
+    message.className = "note ok";
     message.textContent =
       "You're subscribed! 🎉";
 
@@ -221,6 +224,7 @@ form.addEventListener("submit", async function(e) {
 
     console.error(error);
 
+    message.className = "note";
     message.textContent =
       "Something went wrong. Please try again.";
 
